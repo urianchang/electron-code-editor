@@ -1,0 +1,34 @@
+/*CSS Reset */
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+#container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.monaco-editor {
+  height: 100%;
+  width: 100%;
+}
+body{
+    background-color: #ADD8E6;
+}
+th{
+    padding: 5px;
+}
+.title{
+    font-size: 18px;
+}
+#open{
+    display: inline-block;
+}
+#save{
+    display: inline-block;
+}
+button{
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ScriptConf Editor</title>
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+        <div id="nav-bar">
+            <table>
+                <tr>
+                    <th><p class="title">Code Editor for JavaScript</p></th>
+                    <th class="functions">
+                        <button id="open">Open</button>
+                        <button id="save">Save</button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+		<div id="container"></div>
+        <script>
+          require('./renderer.js')
+        </script>
+	</body>
+</html>
