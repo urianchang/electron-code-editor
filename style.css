@@ -2,14 +2,14 @@
 *{
     padding: 0px;
     margin: 0px;
-    overflow: hidden;
+    overflow: visible;
 }
 #container {
-    height: 100vh;
-    width: 100vw;
+    height: 87vh;
+    width: 95vw;
 }
-
 .monaco-editor {
+  margin-left: 10px;
   height: 100%;
   width: 100%;
 }

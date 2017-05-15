@@ -6,24 +6,24 @@ class FileManager {
     this.editor = editor
 
     // When we receive a 'open-file' message, open the file
-    ipcRenderer.on('open-file', (e, url) => this.openFile(url))
-    document.querySelector('#open').onclick = () => this.openF()
+    // ipcRenderer.on('open-file', (e, url) => this.openFile(url))
+    document.querySelector('#open').onclick = () => this.openFile()
     document.querySelector('#save').onclick = () => this.saveFile()
   }
 
-  openFile(url) {
-    // fs.readFile doesn't know what `file://` means
-    url = (url.slice(0, 7) === 'file://') ? url.slice(7) : url
+  // openFile(url) {
+  //   // fs.readFile doesn't know what `file://` means
+  //   url = (url.slice(0, 7) === 'file://') ? url.slice(7) : url
+  //
+  //   fs.readFile(url, 'utf-8', (err, data) => {
+  //     this.editor.setModel(monaco.editor.createModel(data, 'javascript'))
+  //   })
+  // }
 
-    fs.readFile(url, 'utf-8', (err, data) => {
-      this.editor.setModel(monaco.editor.createModel(data, 'javascript'))
-    })
-  }
-
-  openF() {
+  openFile() {
     var url = remote.dialog.showOpenDialog();
     if (url[0].slice(-2) != "js") {
-        console.log("NO!");
+        alert("Please select a JavaScript file!");
     } else {
         fs.readFile(url[0], 'utf-8', (err, data) => {
           this.editor.setModel(monaco.editor.createModel(data, 'javascript'))
