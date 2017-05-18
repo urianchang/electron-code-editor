@@ -20,3 +20,5 @@ A JavaScript code editor built with the Electron framework and Monaco editor.
 * Multiple tabs
 * Integrate emoticons
 * Distribute application as an installer
+
+#### \*\*\* Special thanks to Felix Rieseberg and GitHub HQ for hosting the Electron workshop on February 25, 2017. \*\*\*
