@@ -8,7 +8,7 @@ A JavaScript code editor built with the Electron framework and Monaco editor.
 3. 'npm start' - to start the code editor application
 
 ### Screenshot:
-<img src="https://github.com/urianchang/electron-text-editor/blob/master/screenshots/main.PNG" height=75% width=75% >
+![ScreenShot](/screenshots/main.PNG)
 
 ### Core Features:
 * Open file (.js)
