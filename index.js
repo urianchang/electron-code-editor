@@ -6,15 +6,16 @@ let mainWindow;
 
 app.on('ready', () => {
     const index = path.join(__dirname, 'index.html')
-    // /Users/felix/.../index.html
+    //: Open Chromium browser window
     mainWindow = new BrowserWindow({});
+    //: Load index.html
     mainWindow.loadURL(`file:///${index}`);
-    // loadURL('file:///Users/.../index.html')
 
+    //: WebContents is responsible for rendering and controlling web page
+    //: Prevent user from navigating to another URL
     mainWindow.webContents.on('will-navigate', (e, url) => {
         e.preventDefault();
         console.log(`Tried to navigate to: ${url}`)
-
         mainWindow.webContents.send('navigate', url);
     });
 });
